@@ -1,0 +1,7 @@
+{
+  "name": "Rick & Morty app ",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
