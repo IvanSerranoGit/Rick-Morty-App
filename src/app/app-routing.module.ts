@@ -3,8 +3,17 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+    path:'',
+    redirectTo:'users',
+    pathMatch:'full'
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./users/users.module').then( m => m.UsersPageModule)
+  },
+  {
+    path: 'profile/:id',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   }
 ];
 @NgModule({
